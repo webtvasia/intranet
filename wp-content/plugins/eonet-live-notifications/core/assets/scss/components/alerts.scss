@@ -1,0 +1,32 @@
+/*
+ * Alerts :
+ */
+.eo_alert {
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 4px solid transparent;
+  h4{
+    margin-top: 0;
+    font-size: 18px;
+    color: inherit;
+  }
+  p,ul{
+    margin-bottom: 0;
+  }
+  &.eo_alert_info{
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: darken($blue, 20%);
+  }
+  &.eo_alert_success{
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: $green;
+  }
+  &.eo_alert_danger{
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: $red;
+  }
+}

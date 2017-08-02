@@ -1,0 +1,159 @@
+/*
+ * MODALS :
+ * From Bootstrap https://github.com/twbs/bootstrap/blob/v4-dev/scss/_modal.scss
+ */
+
+$modal-width:600px;
+
+.eo_modal_open {
+  overflow: hidden;
+}
+.eo_modal {
+  font-family: $font-family;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: $modal-width;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  &.fade .modal_dialog {
+    transition: transform .3s ease-out;
+    transform: translate(0, -25%);
+  }
+  &.is-in .modal_dialog {
+    transform: translate(0, 0); }
+
+  &.is-in{ display: block;}
+  &.is-fired{
+    .eo_modal_dialog{
+      right: 0;
+      @include transitionIn(right, .5s);
+    }
+  }
+}
+.eo_modal_open .eo_modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.eo_modal_dialog {
+  margin: 0;
+  width: $modal-width;
+  position: fixed;
+  right: -($modal-width*3);
+  @include transitionOut(right, .2s);
+  height: 100%;
+  overflow-y: scroll;
+}
+.eo_modal_content {
+  position: relative;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  min-height: 100vh;
+}
+.eo_modal_backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1040;
+  background-color: #000;
+  display: none;
+
+  // Fade for backdrop
+  &.fade { opacity: 0; }
+  &.is-in { opacity: .5; display: block; }
+}
+.eo_modal_header {
+  border-bottom: 1px solid #e5e5e5;
+  @include clearfix;
+  padding: 20px 40px;
+  line-height: 2;
+  .eo_close{
+    float: right;
+    border: none;
+    padding: 0;
+    background: none;
+    &:focus{
+      outline: none;
+    }
+    span{
+      color: #666;
+      font-size: 28px;
+      line-height: 28px;
+      display: block;
+      width: 28px;
+      height: 28px;
+      position: relative;
+      transform: rotate(0deg);
+      padding: 0;
+      border-radius: 50%;
+      font-weight: bold;
+      @include transitionOut(all, .4s);
+      &:hover{
+        background: $color1;
+        color: #ffffff;
+        transform: rotate(360deg);
+        @include transitionIn(all, .4s);
+      }
+    }
+  }
+}
+.eo_modal_title {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 28px;
+  text-transform: none;
+  font-weight: 300;
+}
+.eo_modal_body {
+  position: relative;
+  padding: 0px 0px;
+  .eo_form_field{
+    padding: 10px;
+  }
+  .eo_modal_notes{
+    padding: 20px 40px 20px 40px;
+    border-top: 1px solid #e8e8e8;
+    p{
+      margin: 0;
+      font-style: italic;
+      color: #a8a8a8;
+      font-size: 14px;
+    }
+  }
+}
+.eo_modal_footer {
+  text-align: right; // right align buttons
+  border-top: 1px solid #e5e5e5;
+  padding: 20px 40px;
+  @include clearfix(); // clear it in case folks use .pull-* classes on buttons
+  #eo_modal_delete{
+    color: #c30000;
+    font-style: italic;
+    margin-left: 15px;
+    &:hover{
+      color: lighten(#c30000, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+body.admin-bar{
+  .eo_modal .eo_modal_dialog{
+    padding-top: 32px;
+  }
+}
+
+.eo_btn_left{
+  float: left;
+}

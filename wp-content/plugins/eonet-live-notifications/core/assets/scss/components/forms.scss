@@ -1,0 +1,521 @@
+form.eo_form{
+  margin: 0;
+}
+.eo_form_field{
+  border-bottom: 1px solid #e8e8e8;
+  word-wrap: initial;
+  width: 100%;
+  &:last-child{
+    border-bottom: 0;
+  }
+  .eo_field_wrapper{
+    padding: 20px 40px;
+    display: flex;
+  }
+  .eo_field_label{
+    text-transform: inherit;
+    display: block;
+    font-weight: 500;
+    color: $textColor;
+    width: 12%;
+    text-align: right;
+    padding: 5px 0 0 0;
+    font-size: 15px;
+  }
+  .eo_field_container{
+    width: 80%;
+    padding: 0 2.5%;
+    .eo_field_heading_wrapper{
+      font-size: 18px;
+      margin: 0 20px;
+    }
+    .eo_field_desc{
+      margin: 8px 0 0 0;
+      font-style: italic;
+      p{
+        margin: 5px 0 0 0;
+        display: inline-block;
+        font-size: 13px !important;
+        color: #a8a8a8 !important;
+      }
+      i{
+        font-size: 1.3em;
+        vertical-align: middle;
+        color: #a8a8a8;
+      }
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    select,
+    textarea
+    {
+      font-size: 14px;
+      font-family: $font-family;
+      border-radius: 4px;
+      padding: 8px 16px;
+      border: 1px solid #DDD;
+      width: 200px;
+      height: 36px;
+      position: relative;
+      background: #FFF;
+      margin: 0;
+      box-shadow: 0px 1px 4px rgba(0,0,0,.08);
+      &:focus{
+        border-color: $color1;
+        box-shadow: 0px 1px 4px rgba(0,0,0,.2);
+        outline: none;
+      }
+    }
+    textarea{
+      height: initial;
+      width: 100%;
+    }
+    input[type="number"] {
+      width: 80px;
+    }
+    select {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+    .eo_field_switch_wrapper{
+      position: relative;
+      input.eo_field_toggle{
+        position: absolute;
+        margin-left: -9999px;
+        visibility: hidden;
+      }
+      input.eo_field_toggle + label.eo_field_toggle_span {
+        margin-top: -8px;
+        padding: 2px;
+        width: 60px;
+        height: 30px;
+        bottom: -10px;
+        border-radius: 30px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        user-select: none;
+
+      }
+      input.eo_field_toggle + label.eo_field_toggle_span:before,
+      input.eo_field_toggle + label.eo_field_toggle_span:after {
+        display: block;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        bottom: 1px;
+        content: "";
+      }
+      input.eo_field_toggle + label.eo_field_toggle_span:before {
+        right: 1px;
+        background-color: #f1f1f1;
+        border-radius: 30px;
+        transition: background 0.4s;
+      }
+      input.eo_field_toggle + label.eo_field_toggle_span:after {
+        width: 28px;
+        height: 28px;
+        margin-left: 2px;
+        margin-top: 2px;
+        background-color: #fff;
+        border-radius: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: margin 0.4s;
+      }
+      input.eo_field_toggle:checked + label.eo_field_toggle_span:after {
+        margin-left: 32px;
+
+      }
+      input.eo_field_toggle:checked + label.eo_field_toggle_span:before {
+        background: $color1;
+      }
+    }
+    .eo_field_select_wrapper{
+      position: relative;
+      font-size: 12px;
+      overflow: hidden;
+      &.is-active{
+        &:before{
+          border-left-color: $color1 !important;
+        }
+      }
+      &:not(.multiple) {
+        &:after, &:before{
+          left: (200px - 40px);
+          z-index: 10;
+          font-size: 1.2em;
+          font-family: "FontAwesome";
+          position: absolute;
+          color: #a8a8a8;
+        }
+        &:after{
+          content: "\f0d7";
+          padding: 13px 14px 16px 16px;
+        }
+        &:before{
+          content: "\f0d8";
+          padding: 3px 10px 14px 15px;
+          border-left: 1px solid #DDD;
+          top: 1px;
+        }
+        &::-ms-expand {
+          display: none;
+        }
+      }
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: inherit;
+        line-height: inherit;
+      }
+      &.multiple{
+        select{
+          padding: 8px 8px 2px 8px;
+          option{
+            border-radius: 3px;
+            padding: 5px 10px;
+            margin-bottom: 4px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+            &:checked{
+              background: $color1;
+              color: #FFF;
+            }
+          }
+        }
+      }
+    }
+    .eo_field_upload_wrapper{
+      input[type="button"].eo_field_featured_image_trigger{
+        font-size: 13px;
+        text-transform: none;
+        font-weight: 400;
+      }
+      .eo_field_upload_preview{
+        padding: 20px 0;
+        .eo_field_upload_single_file{
+          position: relative;
+          .eo_field_upload_single_delete{
+            $circle_diameter:28px;
+            position: absolute;
+            background: #c30000;
+            width: $circle_diameter;
+            height: $circle_diameter;
+            line-height: $circle_diameter;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 50%;
+            box-shadow: 0px 1px 5px rgba(0,0,0,.2);
+            color: #FFF;
+            right: -10px;
+            top: -10px;
+          }
+          img{
+            border: 8px #fff solid;
+            box-shadow: 0 1px 10px rgba(0,0,0,.1);
+            border-radius: 3px;
+            background: #e8e8e8;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .eo_field_tags_wrapper{
+      ul.eo_tags_list{
+        padding: 8px 16px;
+        list-style-type: none;
+        width: 200px;
+        position: relative;
+        margin: 0;
+        box-shadow: none;
+        border-radius:4px;
+        background: #f1f1f1;
+        @include clearfix();
+        li{
+          position: relative;
+          display: inline-block;
+          input[type=text].eo_field_tags_typer{
+            background: transparent;
+            border: 0;
+            padding: 0 2px;
+            height: initial;
+            width: initial;
+            box-shadow: none;
+          }
+          &.eo_single_tag{
+            background: #949494;
+            float: left;
+            border-radius: 4px;
+            font-size: 14px;
+            padding: 0 10px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            color: #FFF;
+            .eo_single_tag_close{
+              padding-left: 5px;
+              position: relative;
+              bottom: -1px;
+              &:hover{
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    .eo_field_iconpicker_wrapper {
+
+      .eo_field_iconpicker_icon_selected_wrapper {
+        position: relative;
+        background-color: #f1f1f1;
+        padding: 8px 16px;
+        font-size: 22px;
+        line-height: 22px;
+        border-radius: 4px;
+        width: 50px;
+        height: 24px;
+
+        .eo_field_iconpicker_details_trigger {
+          position: absolute;
+          top: 6px;
+          right: 10px;
+          font-size: 18px;
+          border-left: 1px solid #ccc;
+          padding: 3px 7px 3px 7px;
+          color: #999;
+
+          &:hover,
+          &:focus {
+            color: #555;
+          }
+        }
+      }
+
+      .eo_field_iconpicker_icons_details {
+        display: none;
+        margin-top: 15px;
+      }
+
+      .eo_label_for_select span {
+        display: block;
+        font-size: 14px;
+        line-height: 1;
+        margin-bottom: 4px;
+        font-weight: 600;
+      }
+
+      .eo_field_iconpicker_icons_grid_container {
+        margin-top: 10px;
+        max-height: 270px;
+        overflow: auto;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        .eo_field_iconpicker_icons_grid_panel {
+          .eo_field_iconpicker_icons_grid_panel_title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            border-bottom: 1px solid #ccc;
+          }
+          .eo_field_iconpicker_icons_grid_element {
+            font-size: 22px;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            display: block;
+            text-align: center;
+            border: 2px solid white;
+            float: left;
+            &:hover,
+            &:focus{
+              border-color: #CCC !important;
+            }
+            &.selected {
+              border-color: $color1 !important;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      .eo_field_iconpicker_select {
+        display: none;
+      }
+
+    }
+    .eo_field_image_select_wrapper {
+      .eo_image_select_element {
+        display: inline-block;
+        border: 3px solid white;
+        line-height: 0;
+        margin: 3px;
+
+        &:hover,
+        &:focus{
+          border-color: #ccc;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        &.selected {
+          border-color: $color1;
+        }
+      }
+    }
+    .eo_field_colorpicker_wrapper {
+      .eo_field {
+        padding-right: 35px;
+      }
+      .eo_colorpicker_input {
+        position: relative;
+        margin-left: -30px;
+        z-index: 10;
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        line-height: 0;
+        display: inline-block;
+
+        i {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          vertical-align: text-top;
+        }
+      }
+    }
+    .eo_field_typography_wrapper {
+      .eo_input_group {
+        display: inline-block;
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+        label {
+          font-style: italic;
+          display: block;
+        }
+      }
+    }
+    .eo_field_slider_wrapper {
+      .eo_field_slider_value {
+        display: inline-block;
+        margin-right: 1em;
+        font-size: 1.5em;
+        vertical-align: middle;
+        width: 75px;
+      }
+      .slider.slider-horizontal {
+        .slider-track {
+          margin-top: -10px;
+          display: inline-block;
+          height: 20px
+        }
+        .slider-handle {
+          top: -4px;
+          border-radius: 50%;
+          width: 26px;
+          height: 26px;
+          border: 1px solid #e6e6e6;
+          background: #ffffff;
+        }
+        .slider-selection {
+          @include background();
+        }
+
+      }
+    }
+  }
+  &.eo_form_field_type_heading {
+    border-bottom: 0;
+    padding: 0;
+    .eo_field_wrapper {
+      padding-top: 15px;
+      display: block;
+      padding-bottom: 15px;
+      font-size: 1.4em;
+      color: #fff;
+      width: 100%;
+      float: none;
+      box-sizing: border-box;
+      background-color: $color2;
+    }
+  }
+}
+ul.eo_autocomplete_list{
+  padding: 0;
+  position: absolute;
+  margin: 0;
+  left:0;
+  bottom: -25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+  li{
+    display: block;
+    a{
+      display: block;
+      width: 150px;
+      padding: 5px 10px;
+      font-size: 14px;
+      background: #ffffff;
+      border-bottom: 1px solid #CCCCCC;
+      &:hover{
+        color: $color1;
+      }
+    }
+    &:last-child a{
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom: 0;
+    }
+    &:first-child a{
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.colorpicker.dropdown-menu {
+  padding: 5px;
+  min-width: 0;
+}
+
+.menu-item-settings .eo_form_field.eo_form_field_type_iconpicker{
+  border: none;
+  .eo_field_wrapper {
+    padding: 5px 0 0;
+    width: 100%
+  }
+  .eo_field_label {
+    width: auto;
+    text-align: left;
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,133 @@
+0000.001 (0) Opened log file at time: Fri, 21 Jul 2017 07:24:49 +0000 on http://localhost:8888/intranet
+0000.003 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.13.4 WP: 4.8 PHP: 7.1.1 (apache2handler, Darwin Usmans-MacBook-Pro.local 16.6.0 Darwin Kernel Version 16.6.0: Fri Apr 14 16:13:31 PDT 2017; root:xnu-3789.60.24~4/RELEASE_X86_64 x86_64) MySQL: 5.7.18 WPLANG: en_US Server: Apache/2.2.31 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.1.1 mod_ssl/2.2.31 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 50.2M | 12M) multisite: N openssl: OpenSSL 1.0.2j  26 Sep 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.005 (0) Free space on disk containing Updraft's temporary directory: 79792 MB
+0000.009 (0) Tasks: Backup files: 1 (schedule: manual) Backup DB: 0 (schedule: manual)
+0000.017 (0) Semaphore (f, wp_options) being initialised
+0000.027 (0) Requesting semaphore lock (f) (apparently not via scheduler)
+0000.031 (0) Set semaphore last lock (f) time to 2017-07-21 07:24:49
+0000.033 (0) Semaphore lock (f) complete
+0000.037 (0) Backup run: resumption=0, nonce=cedf3f7aeae5, begun at=1500621889 (0s ago), job type=backup
+0000.040 (0) Scheduling a resumption (1) after 300 seconds (1500622189) in case this run gets aborted
+0000.053 (0) Checking if we have a zip executable available
+0000.055 (0) Testing: /usr/bin/zip
+0000.066 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.067 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.068 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.069 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.070 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.078 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.079 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.089 (0) Working binary zip found: /usr/bin/zip
+0000.092 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.093 (0) Creation of backups of directories: beginning
+0000.096 (0) No backup of plugins: excluded by user's options
+0000.097 (0) No backup of themes: excluded by user's options
+0000.099 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0000.100 (0) Looking for candidates to back up in: /Users/usman/Desktop/sites/wordpress/intranet/wp-content/uploads
+0000.102 (0) finding files: .DS_Store: adding to list (1)
+0000.103 (0) finding files: 2015: adding to list (2)
+0000.104 (0) finding files: 2016: adding to list (3)
+0000.105 (0) finding files: 2017: adding to list (4)
+0000.107 (0) finding files: admin-screens: adding to list (5)
+0000.108 (0) finding files: avatars: adding to list (6)
+0000.109 (0) finding files: buddypress: adding to list (7)
+0000.110 (0) finding files: demo-files: adding to list (8)
+0000.111 (0) finding files: file-manager: adding to list (9)
+0000.112 (0) finding files: fw-backup: adding to list (10)
+0000.113 (0) finding files: index.php: adding to list (11)
+0000.114 (0) finding files: projects: adding to list (12)
+0000.114 (0) finding files: revslider: adding to list (13)
+0000.115 (0) finding files: woffice-covers: adding to list (14)
+0000.116 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0000.145 (0) Total entities for the zip file: 34 directories, 228 files (0 skipped as non-modified), 52.6 MB
+0000.149 (0) Zip: backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.152 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (37.5 MB, 228 files batched, 186 (186) added so far); re-opening (prior size: 0 KB)
+0000.509 (0) backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip.tmp: size is now: 37.50 MB
+0000.511 (0) A useful amount of data was added after this amount of zip processing: 1.2 s (normalised: 0.8 s, rate: 33058.8 KB/s)
+0000.513 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.16216993332, normalised_time=0.774377402026, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=203113365)
+0000.515 (0) Zip: backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip.tmp: 200 files added (on-disk size: 38442.6 KB)
+0000.651 (0) backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip.tmp: size is now: 52.60 MB
+0001.969 (0) Created uploads zip (0) - 53884.2 KB in 1.9 s (29118.2 KB/s) (sha1: f7dd24aca4cb83501c84c66a97c3cea50895c724, sha256: 890ca2195c1e53c1373d6f8cb2ebe375ac8ba13dfbb326c4301f7b1b94c780c5)
+0001.971 (0) No backup of others: excluded by user's options
+0001.975 (0) Saving backup status to database (elements: 2)
+0001.978 (0) No database backup (wp) - not part of this run
+0001.979 (0) backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0001.980 (0) Saving backup history. Total backup size: 52.6 MB
+0001.984 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0001.987 (0) Cloud backup selection (1/1): googledrive (last)
+0001.988 (0) Beginning dispatch of backup to remote (googledrive)
+0001.992 (0) Google Drive: requesting access token: client_id=936057430757-qeq32vkeplrjkkg94lt89uh0qmd3qs2j.apps.googleusercontent.com
+0002.167 (0) Google Drive: successfully obtained access token
+0003.375 (0) Google Drive: creating path: /UpdraftPlus
+0005.059 (0) Google Drive quota usage: used=0.6 MB, total=10485760.6 MB, available=10485760 MB
+0005.062 (0) backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip: Attempting to upload to Google Drive (into folder id: 0B1pkGI56XtXYbnIyMVR2SWNyNVE)
+0006.111 (0) Googledrive chunked upload: 1.9 % uploaded (1048576)
+0006.539 (0) Googledrive chunked upload: 3.8 % uploaded (2097152)
+0006.916 (0) Googledrive chunked upload: 5.7 % uploaded (3145728)
+0007.275 (0) Googledrive chunked upload: 7.6 % uploaded (4194304)
+0007.548 (0) Googledrive chunked upload: 9.5 % uploaded (5242880)
+0007.810 (0) Googledrive chunked upload: 11.4 % uploaded (6291456)
+0008.083 (0) Googledrive chunked upload: 13.3 % uploaded (7340032)
+0008.382 (0) Googledrive chunked upload: 15.2 % uploaded (8388608)
+0008.633 (0) Googledrive chunked upload: 17.1 % uploaded (9437184)
+0008.898 (0) Googledrive chunked upload: 19 % uploaded (10485760)
+0009.170 (0) Googledrive chunked upload: 20.9 % uploaded (11534336)
+0009.487 (0) Googledrive chunked upload: 22.8 % uploaded (12582912)
+0009.746 (0) Googledrive chunked upload: 24.7 % uploaded (13631488)
+0009.997 (0) Googledrive chunked upload: 26.6 % uploaded (14680064)
+0010.250 (0) Googledrive chunked upload: 28.5 % uploaded (15728640)
+0010.529 (0) Googledrive chunked upload: 30.4 % uploaded (16777216)
+0010.840 (0) Googledrive chunked upload: 32.3 % uploaded (17825792)
+0011.338 (0) Googledrive chunked upload: 34.2 % uploaded (18874368)
+0011.675 (0) Googledrive chunked upload: 36.1 % uploaded (19922944)
+0011.950 (0) Googledrive chunked upload: 38 % uploaded (20971520)
+0012.287 (0) Googledrive chunked upload: 39.9 % uploaded (22020096)
+0012.562 (0) Googledrive chunked upload: 41.8 % uploaded (23068672)
+0012.813 (0) Googledrive chunked upload: 43.7 % uploaded (24117248)
+0013.084 (0) Googledrive chunked upload: 45.6 % uploaded (25165824)
+0013.690 (0) Googledrive chunked upload: 47.5 % uploaded (26214400)
+0013.975 (0) Googledrive chunked upload: 49.4 % uploaded (27262976)
+0014.260 (0) Googledrive chunked upload: 51.3 % uploaded (28311552)
+0014.527 (0) Googledrive chunked upload: 53.2 % uploaded (29360128)
+0014.832 (0) Googledrive chunked upload: 55.1 % uploaded (30408704)
+0015.118 (0) Googledrive chunked upload: 57 % uploaded (31457280)
+0015.580 (0) Googledrive chunked upload: 58.9 % uploaded (32505856)
+0015.860 (0) Googledrive chunked upload: 60.8 % uploaded (33554432)
+0016.085 (0) Googledrive chunked upload: 62.7 % uploaded (34603008)
+0016.427 (0) Googledrive chunked upload: 64.6 % uploaded (35651584)
+0016.724 (0) Googledrive chunked upload: 66.5 % uploaded (36700160)
+0017.119 (0) Googledrive chunked upload: 68.4 % uploaded (37748736)
+0017.398 (0) Googledrive chunked upload: 70.3 % uploaded (38797312)
+0017.661 (0) Googledrive chunked upload: 72.2 % uploaded (39845888)
+0017.922 (0) Googledrive chunked upload: 74.1 % uploaded (40894464)
+0018.199 (0) Googledrive chunked upload: 76 % uploaded (41943040)
+0018.720 (0) Googledrive chunked upload: 77.9 % uploaded (42991616)
+0018.946 (0) Googledrive chunked upload: 79.8 % uploaded (44040192)
+0019.209 (0) Googledrive chunked upload: 81.7 % uploaded (45088768)
+0019.539 (0) Googledrive chunked upload: 83.6 % uploaded (46137344)
+0019.804 (0) Googledrive chunked upload: 85.5 % uploaded (47185920)
+0020.165 (0) Googledrive chunked upload: 87.4 % uploaded (48234496)
+0020.425 (0) Googledrive chunked upload: 89.3 % uploaded (49283072)
+0020.697 (0) Googledrive chunked upload: 91.2 % uploaded (50331648)
+0020.953 (0) Googledrive chunked upload: 93.1 % uploaded (51380224)
+0021.660 (0) Googledrive chunked upload: 95 % uploaded (52428800)
+0021.942 (0) Googledrive chunked upload: 96.9 % uploaded (53477376)
+0022.211 (0) Googledrive chunked upload: 98.8 % uploaded (54525952)
+0024.060 (0) Googledrive chunked upload: 100 % uploaded (54525952)
+0024.063 (0) OK: Archive backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip uploaded to Google Drive in 19 seconds
+0024.066 (0) Recording as successfully uploaded: backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip (21abe8d2f6bbb41f1850af7e2204a77e)
+0024.073 (0) Deleting local file: backup_2017-07-21-1524_WTV_Office_cedf3f7aeae5-uploads.zip: OK
+0024.075 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0024.077 (0) Number of backup sets in history: 1; groups (db): 1
+0024.077 (0) Examining (for databases) backup set with group_id=0, nonce=cedf3f7aeae5, datestamp=1500621889 (Jul 21 2017 07:24:49)
+0024.078 (0) Number of backup sets in history: 1; groups (files): 1
+0024.079 (0) Examining (for files) backup set with nonce=cedf3f7aeae5, datestamp=1500621889 (Jul 21 2017 07:24:49)
+0024.080 (0) This backup set is the backup set just made, so will not be deleted.
+0024.081 (0) This backup set remains non-empty (f=1/d=0); will retain in history
+0024.082 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0024.084 (0) Resume backup (cedf3f7aeae5, 0): finish run
+0024.087 (0) Decremented the semaphore (f) by 1
+0024.089 (0) Semaphore (f) unlocked
+0024.090 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0024.094 (0) No email will/can be sent - the user has not configured an email address.
+0024.095 (0) The backup apparently succeeded and is now complete

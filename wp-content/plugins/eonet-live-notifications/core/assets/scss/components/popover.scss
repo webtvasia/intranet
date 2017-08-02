@@ -1,0 +1,58 @@
+/*
+ * POPOVER :
+ */
+.popover{
+  padding: 0;
+  border: 0;
+  .popover-content {
+    padding: 0;
+  }
+}
+.popover{
+  width: 300px;
+  .eonet_popover_header{
+    padding: 60px 20px 15px 20px;
+    position: relative;
+    .eonet_popover_featured{
+      position: absolute;
+      border-radius: 5px 5px 0 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/cover.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    h4{
+      margin: 0;
+      color: #FFFFFF;
+      position: relative;
+    }
+  }
+  .eonet_popover_content{
+    padding: 20px;
+    border-bottom: 1px solid #CCC;
+    ul{
+      li{
+        i{
+          font-size: 1.3em;
+          position: relative;
+          float: l;
+          display: inline-block;
+          width: 25px;
+          padding-right: 5px;
+          color: #a5a5a5;
+        }
+      }
+    }
+  }
+  .eonet_popover_actions{
+    text-align: center;
+    padding-top: 20px;
+    a{
+      margin-bottom: 20px;
+    }
+  }
+}

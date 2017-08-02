@@ -1,0 +1,64 @@
+/*---------------------------------------------------------
+**
+** PRINT STYLESHEET
+**
+----------------------------------------------------------*/
+@media print {
+  body {
+    background: white;
+    color: black;
+    margin: 0;
+  }
+  #content-container #content{
+    width: 100%;
+  }
+  #left-content{
+    width: 100%;
+  }
+  #navigation,
+  #main-header,
+  #right-sidebar,
+  #main-footer,
+  #scroll-top-container,
+  .blog-next-page {
+    display: none;
+  }
+  #main-content {
+    padding-left: 0;
+  }
+  #main-content {
+    width: 100%;
+  }
+  #featuredbox {
+    height: auto !important;
+    border: 0 !important;
+    .featured-background {
+      background: none;
+      display: none;
+      .featured-layer {
+        display: none;
+      }
+    }
+    .pagetitle {
+      position: relative;
+    }
+    &.has-search form {
+      display: none;
+    }
+  }
+  #featuredbox .featured-background, #featuredbox .pagetitle{
+    height: initial !important;
+  }
+  #featuredbox .pagetitle,
+  #featuredbox .pagetitle h1 {
+    color: #2f2f2f;
+  }
+  #featuredbox.has-search.is-404 .pagetitle>h1, #featuredbox.has-search.search-buddypress .pagetitle>h1{
+    font-size: 3.5em;
+    bottom: 0;
+    margin: 20px 0 40px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DDD;
+    display: block;
+  }
+}

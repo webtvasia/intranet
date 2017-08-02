@@ -1,0 +1,74 @@
+/*
+ * Loader :
+ */
+$amount: 8px;
+@keyframes ball-pulse-sync {
+  33% {
+    transform: translateY($amount);
+  }
+  66% {
+    transform: translateY(-$amount);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@function delay($interval, $count, $index) {
+  @return ($index * $interval) - ($interval * $count);
+}
+@mixin ball-pulse-sync($n: 3, $start: 1) {
+  @for $i from $start through $n {
+    > div:nth-child(#{$i}) {
+      animation: ball-pulse-sync 0.6s delay(0.07s, $n, $i) infinite ease-in-out;
+    }
+  }
+}
+.has_loader_colored,
+.has_loader{
+  position: relative;
+  &.btn{
+    .eonet_loader{
+      border-radius: 40px;
+      .loader-inner{
+        margin-top: -12px;
+        div{
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+  }
+  &.has_loader_colored{
+    .eonet_loader{
+      background: rgba(255,255,255,.6);
+      .loader-inner div{
+        background-color: $color1;
+      }
+    }
+  }
+  .eonet_loader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    .loader-inner{
+      text-align: center;
+      top: 50%;
+      position: absolute;
+      width: 100%;
+      margin-top: -($amount);
+      @include ball-pulse-sync();
+      div {
+        background-color: #FFF;
+        animation-fill-mode: both;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        display: inline-block;
+      }
+    }
+  }
+}
